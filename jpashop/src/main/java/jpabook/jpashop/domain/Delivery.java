@@ -5,8 +5,7 @@ import jakarta.persistence.*;
 import jakarta.persistence.criteria.Order;
 import lombok.Getter;
 import lombok.Setter;
-import jakarta.persistence.*;
-import jakarta.persistence.*;
+
 @Entity
 @Getter @Setter
 public class Delivery {
