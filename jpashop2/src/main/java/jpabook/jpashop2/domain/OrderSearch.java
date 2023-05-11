@@ -1,4 +1,4 @@
-package jpabook.jpashop2.repository;
+package jpabook.jpashop2.domain;
 
 import jpabook.jpashop2.domain.OrderStatus;
 import lombok.Getter;
