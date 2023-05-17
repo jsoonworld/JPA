@@ -1,24 +1,28 @@
 package jpabook.jpashop.domain;
-import jakarta.persistence.Entity;
-import jakarta.persistence.criteria.Order;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
-import jakarta.persistence.*;
 import lombok.Setter;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import java.util.ArrayList;
-
 import java.util.List;
+
 @Entity
-@Getter
-@Setter
+@Getter @Setter
 public class Member {
+
     @Id @GeneratedValue
     @Column(name = "member_id")
     private Long id;
+
     private String name;
+
     @Embedded
     private Address address;
+
+    @JsonIgnore
     @OneToMany(mappedBy = "member")
     private List<Order> orders = new ArrayList<>();
+
 }
