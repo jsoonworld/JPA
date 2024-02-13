@@ -13,13 +13,6 @@ public class JpaMain {
         tx.begin();
 
         try {
-            // 영속
-            Member member = new Member();
-            member.setId(3L);
-            member.setUsername("C");
-            member.setRoleType(RoleType.ADMIN);
-
-            em.persist(member);
 
             tx.commit();
         } catch (Exception e) {
