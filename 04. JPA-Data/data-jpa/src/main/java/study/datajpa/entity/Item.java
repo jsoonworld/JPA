@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @EntityListeners(AuditingEntityListener.class)
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+//@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Item implements Persistable<String> {
 
     @Id
@@ -28,6 +28,8 @@ public class Item implements Persistable<String> {
         this.id = id;
     }
 
+    public Item() {
+    }
 
     @Override
     public String getId() {
